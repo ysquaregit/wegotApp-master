@@ -1,0 +1,122 @@
+<ion-header>
+  <ion-toolbar color="venAqua">
+    <button ion-button menuToggle left>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title text-center>
+      <ion-title class="headingDisp"><b>VenAqua</b></ion-title>
+    </ion-title>
+    <ion-buttons end>
+      <button ion-button (click)="doClick()">
+        <ion-icon name="more"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="homePage">
+
+  <ion-menu side="left" [content]="mycontent">
+    <ion-content padding>
+      <ion-list>
+
+        <ion-grid>
+          <ion-row>
+            <ion-col>
+              <a (click)="toHome()">
+                <ion-icon class="image" ios="ios-home" md="md-home"></ion-icon>
+                <span class="headingDisp"> Home</span></a>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+
+        <ion-grid>
+          <ion-row>
+            <ion-col>
+              <a (click)="toAlarms()">
+                <ion-icon class="image" ios="ios-alert" md="md-alert"></ion-icon>
+                <span class="headingDisp">Alarms</span></a>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+
+        <ion-grid>
+          <ion-row>
+            <ion-col padding-bottom>
+              <a (click)="toBills()">
+                <ion-icon class="image" ios="ios-card" md="md-card"></ion-icon>
+                <span class="headingDisp">Bill Summary</span></a>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+
+        <hr>
+
+        <ion-grid>
+          <ion-row>
+            <ion-col padding-top>
+              <a (click)="toProfile()">
+                <ion-icon class="image1" ios="ios-contact" md="md-contact"></ion-icon>
+                <span class="headingDisp">Profile</span></a>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+
+        <ion-grid>
+          <ion-row>
+            <ion-col>
+              <a (click)="toSettings()">
+                <ion-icon class="image1" ios="ios-settings" md="md-settings"></ion-icon>
+                <span class="headingDisp"> Settings</span></a>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+
+        <ion-grid>
+          <ion-row>
+            <ion-col>
+              <a (click)="toLogout()">
+                <ion-icon class="image1" ios="ios-log-out" md="md-log-out"></ion-icon>
+                <span class="headingDisp">Logout</span></a>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-list>
+
+      <ion-footer no-border>
+        <ion-row>
+          <ion-col text-center padding>
+            <img src="assets/wegot.png" class="logo"/>
+            <span class="subtitle">Version: 3.0.0</span>
+          </ion-col>
+        </ion-row>
+      </ion-footer>
+
+    </ion-content>
+  </ion-menu>
+
+  <ion-nav #mycontent [root]="rootPage"></ion-nav>
+
+  <ion-refresher (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+
+  <ion-slides #pageSlider
+              (ionSlideWillChange)="changeWillSlide($event)"
+              [initialSlide]="1">
+
+    <ion-slide>
+      <page-left-panel></page-left-panel>
+    </ion-slide>
+
+    <ion-slide>
+      <page-home></page-home>
+    </ion-slide>
+
+    <!--<ion-slide>-->
+    <!--<page-right-panel></page-right-panel>-->
+    <!--</ion-slide>-->
+
+  </ion-slides>
+
+</ion-content>

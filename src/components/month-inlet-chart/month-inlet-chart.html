@@ -1,0 +1,18 @@
+<ion-grid fixed style="height: auto; width: auto">
+  <!--<span class="headingDisp" text-center>Day Usage</span>-->
+
+  <div class="chart">
+
+    <canvas baseChart width="400" height="300"
+            [colors]="lineChartColors"
+            [datasets]="barChartData"
+            [labels]="barChartLabels"
+            [options]="barChartOptions"
+            [legend]="barChartLegend"
+            [chartType]="barChartType"
+            (chartHover)="chartHovered($event)"
+            (chartClick)="chartClicked($event)"></canvas>
+
+  </div>
+
+</ion-grid>

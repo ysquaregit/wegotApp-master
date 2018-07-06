@@ -1,0 +1,57 @@
+page-main-options {
+
+    ion-card {
+      position: relative;
+      text-align: center;
+    }
+
+    .card-title {
+      position: absolute;
+      top: 20%;
+      font-family: 'Lato';
+      font-size: 2.0em;
+      width: 100%;
+      font-weight: 300;
+      color: #fff;
+    }
+
+    .card-subtitle {
+      font-size: 1.0em;
+      position: absolute;
+      top: 52%;
+      width: 100%;
+      color: #fff;
+    }
+
+    .image {
+      height: 30vw;
+      width: 30vw;
+      border: 2px solid #fff;
+      border-radius: 50%;
+      box-shadow: 0 0 5px gray;
+      display: inline-block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .headingDisp {
+        font-family: 'Lato', sans-serif;
+        font-size: 20px;
+        color: #fff;
+      }
+
+    .cardDisp {
+      font-family: 'Lato', sans-serif;
+      font-size: 30px;
+      color: #3E2723;
+    }
+
+    .contentDisp {
+      display: block;
+      font-family: 'Lato', sans-serif;
+      font-size: 18px;
+      color: #fff;
+    }
+
+
+}

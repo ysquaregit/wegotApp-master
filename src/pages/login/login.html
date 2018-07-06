@@ -1,0 +1,47 @@
+<ion-content padding class="homePage" >
+
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <img src="assets/wegot.png" class="logo" padding/>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-list padding-top >
+
+    <ion-row>
+      <ion-item>
+        <ion-label floating class="centerDisp">Email</ion-label>
+        <ion-input [(ngModel)]="user.email" type="email"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating class="centerDisp">Password</ion-label>
+        <ion-input [(ngModel)]="user.password" type="password"></ion-input>
+      </ion-item>
+
+    </ion-row>
+
+  </ion-list>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col center text-center>
+        <button ion-button class="buttonDisp" color="secondary" block (click)="login(user)">Login</button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col center text-center>
+        <button ion-button class="buttonDisp" color="light" block (click)="scan()" >Signup</button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <p (click)="resetpassword()" text-center class="subtitle">forgot password?</p>
+
+  <p (click)="verifyOTP()" text-center class="subtitle">forgot password?</p>
+</ion-content>

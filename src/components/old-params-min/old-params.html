@@ -1,0 +1,17 @@
+
+
+<ion-grid >
+  <ion-row justify-content-start ><ion-col><span class="headingDisp" >Last Month Usage</span></ion-col></ion-row>
+  <ion-row>
+    <ion-col col-12 text-center> <span class="indvParamDisp" > {{prev_month_total}}</span>
+      <span class="subtitle">Kw Used</span></ion-col>
+  </ion-row>
+
+  <ion-row>
+    <ion-col col-12> <a (click)="billsPage()"><span class="centerDisp">₹{{ prev_month_cost }} <span class="subtitle">Bill Amount</span></span>
+      <span class="dtDisp"><button ion-button color="secondary" outline>Pay Now</button></span></a >
+    </ion-col>
+  </ion-row>
+
+
+</ion-grid>

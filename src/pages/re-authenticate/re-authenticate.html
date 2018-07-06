@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-navbar color="venAqua">
+    <ion-title class="headingDisp"><b>Profile</b></ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="homePage">
+
+  <ion-grid>
+    <ion-row padding-top>
+      <ion-col text-center>
+        <span class="headingDisp">Your Email id is:</span>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid>
+    <ion-row padding-top text-center>
+      <ion-col>
+        <span class="headingDisp">{{email}}</span>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-row>
+    <ion-col>
+      <ion-item>
+        <ion-label floating class="contentDisp">Current Password</ion-label>
+        <ion-input [(ngModel)]="user.password" type="password"></ion-input>
+      </ion-item>
+    </ion-col>
+  </ion-row>
+
+  <ion-grid>
+    <ion-row padding-top>
+      <ion-col>
+        <button ion-button (click)="reauthenticate(email, user)" color="light" block>
+          <span class="headingDisp">Next</span></button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>

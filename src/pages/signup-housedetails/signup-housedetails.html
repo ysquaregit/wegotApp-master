@@ -1,0 +1,32 @@
+
+<ion-content padding class="homePage">
+  <h2>About your place</h2>
+  <p>This information will help us server better</p>
+
+  <ion-item>
+    <ion-label stacked>House Size</ion-label>
+    <ion-select interface="popover" [(ngModel)]="profile.hsize">
+      <ion-option value="0">select</ion-option>
+      <ion-option value="1">1 BHK</ion-option>
+      <ion-option value="2">2 BHK</ion-option>
+      <ion-option value="3">3 BHK</ion-option>
+      <ion-option value="4">4 BHK</ion-option>
+      <ion-option value="5">5 BHK</ion-option>
+    </ion-select>
+  </ion-item>
+
+
+  <ion-item>
+    <ion-label floating class="centerDisp">No of People</ion-label>
+    <ion-input [(ngModel)]="profile.noofpeople" type="number"></ion-input>
+  </ion-item>
+</ion-content>
+<ion-footer>
+  <ion-row>
+    <ion-col no-padding>
+      <button no-margin ion-button full large color="primary" (click)="moveNext()">Next</button>
+    </ion-col>
+
+
+  </ion-row>
+</ion-footer>

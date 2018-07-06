@@ -1,0 +1,13 @@
+<ion-grid>
+
+  <ion-row>
+    <ion-col col-12>
+      <span class="centerDisp">₹{{ prev_month_cost | number }}
+      <span class="subtitle">Bill Amount</span></span>
+      <a (click)="payButton()">
+        <span class="dtDisp"><button ion-button color="secondary" outline>Pay Now</button></span>
+      </a>
+    </ion-col>
+  </ion-row>
+
+</ion-grid>

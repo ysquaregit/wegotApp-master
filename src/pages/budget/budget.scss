@@ -1,0 +1,54 @@
+page-budget {
+
+
+  .bgdivCenter{
+    //background: black;
+    background: white;
+  }
+
+  .progress-wrapper {
+    position: relative;
+    margin: 20px auto;
+    font-size: 30px;
+    text-align: center;
+  }
+
+  .current {
+    position: absolute;
+    //color: #bbb;
+    color: #40ACE2;
+    font-weight: 100;
+    line-height: 1;
+  }
+
+
+  .headingDisp{
+
+    display: block;
+    font-family: 'Lato', sans-serif;
+    font-size: 18px;
+    //color: white;
+    color: #424242;
+  }
+
+  .subheadingDisp{
+
+    display: block;
+    font-family: 'Lato', sans-serif;
+    font-size: 18px;
+    //color: white;
+    color: #40ACE2;
+  }
+
+  .contentDisp{
+
+    display: block;
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+    //color: white;
+    color: #424242;
+
+  }
+
+
+}

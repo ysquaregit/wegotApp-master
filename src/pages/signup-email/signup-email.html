@@ -1,0 +1,30 @@
+
+
+
+<ion-content padding class="homePage">
+  <h2>Email Address</h2>
+  <p>Provide an email address to signup with us</p>
+
+  <ion-item>
+    <ion-label floating class="centerDisp">Email</ion-label>
+    <ion-input [(ngModel)]="email" type="email"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label floating class="centerDisp">Password</ion-label>
+    <ion-input [(ngModel)]="password" type="password"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label floating class="centerDisp">Password</ion-label>
+    <ion-input [(ngModel)]="verify" type="password"></ion-input>
+  </ion-item>
+</ion-content>
+<ion-footer>
+  <ion-row>
+    <ion-col no-padding>
+      <button no-margin ion-button full large color="primary" (click)="moveNext()">Next</button>
+    </ion-col>
+
+
+  </ion-row>
+</ion-footer>

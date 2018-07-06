@@ -1,0 +1,50 @@
+<!--Live Data-->
+
+<!--<ion-card no-lines ion-item color="venAqua" (click)="goToDaySummaryChart()">-->
+<ion-card no-lines ion-item color="venAqua" (click)="goToDaySummaryChart()">
+
+  <ion-row>
+
+    <ion-col width-50 text-center *ngFor="let points of dayCompSumData">
+
+      <ion-card-header class="headingDisp">
+      {{ points.compName}}
+      </ion-card-header>
+
+      <ion-card-content class="centerDisp">
+          {{points.compValue}} Litres
+      </ion-card-content>
+
+      <!--<span class="centerDisp">-->
+      <!--{{ points.compName}}-->
+
+      <!--<div>{{points.compValue}} Litres</div>-->
+
+      <!--</span>-->
+
+
+    </ion-col>
+
+  </ion-row>
+
+</ion-card>
+
+<!--Dummy data-->
+
+<!--<ion-card ion-item no-lines color="venAqua">-->
+
+<!--<ion-row>-->
+<!--<ion-col width-50 text-center *ngFor="let point of customerDayValue" (click)="goToDaySummaryChart()">-->
+
+<!--<ion-card-header class="headingDisp">-->
+<!--{{ point.sensorname }}-->
+<!--</ion-card-header>-->
+
+<!--<ion-card-content>-->
+<!--<span class="centerDisp">{{ point.sensorvalue }} L</span>-->
+
+<!--</ion-card-content>-->
+<!--</ion-col>-->
+
+<!--</ion-row>-->
+<!--</ion-card>-->

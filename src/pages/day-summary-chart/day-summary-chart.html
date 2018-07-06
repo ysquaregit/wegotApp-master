@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-navbar color="venAqua">
+    <ion-title class="headingDisp"><b>Day Summary</b></ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="homePage">
+
+  <!--<ion-refresher (ionRefresh)="doRefresh($event)">-->
+    <!--<ion-refresher-content>-->
+    <!--</ion-refresher-content>-->
+  <!--</ion-refresher>-->
+
+<!--<day-chart></day-chart>-->
+
+  <div text-center>
+    <span class="usageLitres"><b>{{dayTotal}} </b><span class="subtitle"><b>Litres</b></span></span>
+  </div>
+
+  <div text-center padding-bottom>
+    <span class="subtitle"><b>water used Today</b></span>
+  </div>
+
+  <ion-card *ngFor="let points of dayCompSumData" color="venAqua">
+
+    <ion-card-header class="cardHeading">
+      {{ points.compName }}
+    </ion-card-header>
+
+    <ion-card-content>
+      <span class="centerDisp">
+        {{ points.compValue }}
+      </span>Litres
+    </ion-card-content>
+
+  </ion-card>
+
+</ion-content>

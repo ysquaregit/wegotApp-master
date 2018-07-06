@@ -1,0 +1,101 @@
+<ion-grid>
+
+  <div text-center>
+    <span class="usageLitres"><b>{{dayTotal}} </b><span class="subtitle"><b>Litres</b></span></span>
+  </div>
+
+  <div text-center>
+    <span class="subtitle"><b>water used Today</b></span>
+  </div>
+
+  <!--Temp hidden. Hourly Charts Total-->
+
+  <!--<div class="chart">
+
+    <canvas baseChart height="75%" width="100%"
+            [colors]="barChartColors"
+            [datasets]="barChartData"
+            [labels]="barChartLabels"
+            [options]="barChartOptions"
+            [legend]="barChartLegend"
+            [chartType]="barChartType"
+            (chartHover)="chartHovered($event)"
+            (chartClick)="chartClicked($event)"></canvas>
+
+  </div>-->
+
+<!--Temp hidden. Calendar selector-->
+
+  <!--<div text-center>
+    <ion-item>
+      <ion-label class="headingDisp">Date</ion-label>
+      <ion-datetime class="headingDisp" displayFormat="DD MMMM YYYY" min="2017-10-10" max="2017-12-11"
+                    [(ngModel)]="myDate">
+      </ion-datetime>
+    </ion-item>
+  </div>
+
+  <hr>-->
+
+  <!--Temp hidden. Inletwise heading-->
+
+  <!--<div text-center>
+    <span class="headingDisp">Inlet-wise usage</span>
+  </div>-->
+
+  <!--Dummy data-->
+
+  <!--<div>
+  <ion-card  *ngFor="let point of customerDayValue" (click)="presentPopover($event)">
+  <ion-card-header>
+  <span class="contentDisp"></span>
+  {{ point.sensorname }}
+  </ion-card-header>
+
+  <ion-card-content>
+  <progress class="progress" max="{{dayUsage}}" value="{{point.sensorvalue}}"></progress>
+  <span class="subtitle">
+  {{point.sensorvalue}} Litres used
+  </span>
+  </ion-card-content>
+
+  </ion-card>
+  </div>-->
+
+  <!--Temp hidden. Real data. Enable if hour chart is enabled-->
+
+  <!--<div>
+    <ion-card *ngFor="let points of dayCompSumData" (click)="presentPopover($event, points)">
+      <ion-card-header>
+        <span class="contentDisp">
+        {{ points.compName }}
+          </span>
+      </ion-card-header>
+
+      <ion-card-content>
+        <progress class="progress" max="{{dayTotal}}" value="{{points.compValue}}"></progress>
+        <span class="subtitle">
+      {{points.compValue}} Litres used
+    </span>
+      </ion-card-content>
+
+    </ion-card>
+  </div>-->
+
+  <!--Real data-->
+
+  <ion-card *ngFor="let points of dayCompSumData" color="venAqua">
+
+    <ion-card-header class="cardHeading">
+      {{ points.compName }}
+    </ion-card-header>
+
+    <ion-card-content>
+      <span class="centerDisp">
+        {{ points.compValue }}
+      </span>Litres
+    </ion-card-content>
+
+  </ion-card>
+
+</ion-grid>

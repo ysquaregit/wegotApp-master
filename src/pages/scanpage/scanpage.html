@@ -1,0 +1,41 @@
+
+
+<ion-content padding center text-center>
+
+<br/>
+<h1>UID</h1>
+
+<br/>
+  <br/>
+      <p> Choose from the following options to proceed</p>
+<br/>
+
+
+  <button ion-button class="buttonDisp" color="secondary" block (click)="manual()" >Enter Manually</button>
+
+  <br/>
+  <br/>
+  <br>
+  <ion-row>
+<ion-col col-4></ion-col>
+    <ion-col col-4>
+      <button ion-button class="buttonDisp" color="light" block (click)="scan()">  <br/><ion-icon ios="ios-qr-scanner" md="md-qr-scanner"></ion-icon> </button>
+
+    </ion-col>
+    <ion-col col-4></ion-col>
+  </ion-row>
+
+
+  <ion-row>
+    <ion-col>
+
+      <p *ngIf="showinstruction == 1">Point your phone camera towards QR code</p>
+      <h3 *ngIf="code != ''"> -</h3>
+
+    </ion-col>
+  </ion-row>
+<br/>
+
+
+
+</ion-content>

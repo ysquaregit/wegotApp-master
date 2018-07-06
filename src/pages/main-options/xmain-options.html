@@ -1,0 +1,58 @@
+<ion-content class="mainOptionsPage">
+
+  <ion-card color="home">
+
+    <ion-row align-items-center>
+      <ion-col>
+        <img class="image" src="assets/dp.jpg"/>
+      </ion-col>
+
+      <ion-col style="text-align: center">
+        <span class="headingDisp">Hi,</span>
+
+        <span class="contentDisp">
+            {{ (profileData | async)?.firstName }}
+            {{ (profileData | async)?.lastName }}
+          </span>
+
+      </ion-col>
+    </ion-row>
+  </ion-card>
+
+  <ion-card (click)="goToHome()">
+    <img src="assets/venaqua.png"/>
+    <div class="card-title">{{ ven_liters}}</div>
+    <div class="card-subtitle">Litres</div>
+  </ion-card>
+
+  <ion-card>
+    <img src="assets/mintix.png"/>
+    <div class="card-subtitle">Contact Sales</div>
+  </ion-card>
+
+  <ion-card>
+    <img src="assets/erika.png"/>
+    <div class="card-subtitle">Contact Sales</div>
+  </ion-card>
+
+  <a href="http://www.wegot.in/day-without-water/">
+  <ion-card>
+    <img src="assets/save_water.jpg"/>
+
+    <ion-card-content>
+      <ion-card-title>
+        <span class="cardDisp">
+          <b>
+        A day without Water?
+            </b>
+        </span>
+      </ion-card-title>
+      <p>
+        <!--Lorem Ipsum Dolor Save water Article from Blog could be shown right here..-->
+        Brushing. Showering. Shaving. Pretty normal everyday activities isn’t it? What could possibly go wrong with them? Let me sketch out...
+      </p>
+    </ion-card-content>
+  </ion-card>
+  </a>
+
+</ion-content>

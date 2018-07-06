@@ -1,0 +1,19 @@
+
+
+<ion-content padding class="homePage">
+  <h2>Mobile Number</h2>
+  <p>Provide a mobile number for receving important alerts</p>
+
+  <ion-item>
+    <ion-label floating class="centerDisp">Mobile Number</ion-label>
+    <ion-input [(ngModel)]="mobile" type="number"></ion-input>
+  </ion-item>
+
+
+  <ion-item>
+    <ion-label floating class="centerDisp">Re Enter Mobile Number</ion-label>
+    <ion-input [(ngModel)]="mobverify" type="number"></ion-input>
+  </ion-item>
+  <button ion-button block class="buttonDisp" color="primary" (click)="verifymob()">Verify</button>
+
+</ion-content>

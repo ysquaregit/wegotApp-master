@@ -1,0 +1,21 @@
+<ion-content padding style="background-color: white" >
+
+  <ion-slides #pageSlider
+              (ionSlideWillChange)="changeWillSlide($event)"
+              [initialSlide]="1">
+
+    <ion-slide>
+      <page-day-summary-chart></page-day-summary-chart>
+    </ion-slide>
+
+    <ion-slide>
+      <page-day-summary-chart></page-day-summary-chart>
+    </ion-slide>
+
+    <ion-slide>
+      <page-day-summary-chart></page-day-summary-chart>
+    </ion-slide>
+
+  </ion-slides>
+
+</ion-content>

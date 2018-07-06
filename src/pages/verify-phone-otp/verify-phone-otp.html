@@ -1,0 +1,57 @@
+<ion-content padding>
+
+  <ion-grid>
+    <ion-row justify-content-start text-center>
+      <ion-col><span class="headingDisp">Verify Mobile Number</span></ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col text-center class="centerDisp">
+        <p>Your entered Mobile number is {{ user.mobile }}</p>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col center text-center class="centerDisp">
+        <p>OTP has been sent to you on your mobile number. Please enter it below:</p>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-item padding>
+    <ion-label floating class="centerDisp">OTP</ion-label>
+    <ion-input [(ngModel)]="user.otp" (ionChange)="chk()" type="number"></ion-input>
+  </ion-item>
+
+  <!--<ion-row>-->
+  <!--<ion-col text-center>-->
+  <!---->
+  <!--</ion-col>-->
+  <!--</ion-row>-->
+
+  <p text-center class="subtitle">Didn't received otp?</p>
+
+  <!--<ion-grid>-->
+  <!--<ion-row>-->
+  <!--<ion-col text-left>-->
+  <!--<button ion-button color="secondary" (click)="sendOtp(user)">Resend OTP</button>-->
+  <!--</ion-col>-->
+  <!--<ion-col text-right>-->
+  <!--<button ion-button color="secondary" (click)="sendOtp(user)">Change Number</button>-->
+  <!--</ion-col>-->
+  <!--</ion-row>-->
+  <!--</ion-grid>-->
+
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <button ion-button block color="secondary" (click)="verifyNum(user)">Verify</button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>

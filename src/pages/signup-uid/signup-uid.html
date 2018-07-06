@@ -1,0 +1,47 @@
+
+
+<ion-content padding class="homePage"  center text-center>
+  <ion-grid>
+
+
+    <ion-row>
+      <ion-col align-self-center>
+        <div>
+          <h1 >Hi!</h1>
+          <p>Welcome to Wegot</p><p>Enter the UID to proceed</p>
+        </div>
+      </ion-col>
+    </ion-row>
+<ion-row>
+  <ion-col align-self-center>
+    <ion-item padding-top>
+      <ion-label floating class="centerDisp">UID</ion-label>
+      <ion-input [(ngModel)]="profile.uniqueId" type="password"></ion-input>
+    </ion-item>
+    <ion-item>
+
+      <ion-label floating class="centerDisp">Re-enter UID</ion-label>
+      <ion-input [(ngModel)]="profile.uniqueId1" type="text"></ion-input>
+    </ion-item>
+
+
+  </ion-col>
+</ion-row>
+
+  </ion-grid>
+
+
+
+
+
+</ion-content>
+
+<ion-footer>
+  <ion-row>
+    <ion-col no-padding>
+      <button no-margin ion-button full large color="primary" (click)="moveNext()">Next</button>
+    </ion-col>
+
+
+  </ion-row>
+</ion-footer>

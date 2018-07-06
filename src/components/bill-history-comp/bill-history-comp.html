@@ -1,0 +1,41 @@
+<ion-grid>
+
+  <ion-row>
+    <ion-col text-center>
+      <span class="headingDisp">History</span>
+    </ion-col>
+  </ion-row>
+
+  <ion-row>
+    <ion-col *ngIf="billHistory.length > 0; else noAlarmsTemplate">
+
+      <ion-list>
+        <ion-item *ngFor="let item of billHistory">
+         <ion-col col-6 text-left padding-left>
+
+           {{ item.month | date: 'MMMM yyyy' }} - ₹ {{item.amount}}
+
+         </ion-col>
+          <ion-col col-6 text-right>
+            <ion-badge color="venAqua">{{ item.status }}</ion-badge>
+          </ion-col>
+        </ion-item>
+      </ion-list>
+
+    </ion-col>
+
+    <ng-template #noAlarmsTemplate>
+      <ion-card color="venAqua">
+
+        <ion-card-content text-center>
+          <span class="cardContent">
+          No Bill history found !!
+          </span>
+        </ion-card-content>
+
+      </ion-card>
+    </ng-template>
+
+  </ion-row>
+
+</ion-grid>

@@ -1,0 +1,96 @@
+<ion-row text-center>
+  <ion-col>
+    <span class="headingDisp">Active Alarms</span>
+  </ion-col>
+</ion-row>
+
+<ion-grid class='bgdivCenter' text-center>
+
+  <ion-row>
+    <ion-col *ngIf="activeAlarm.length > 0; else noAlarmsTemplate">
+
+      <!--<ion-card *ngFor="let alarms of activeAlarm; let i = index" color="danger">-->
+      <!--<div *ngIf="alarms.compName !== activeAlarm[i - 1].compName">-->
+
+      <ion-card *ngFor="let alarms of activeAlarm" color="danger">
+
+        <ion-card-title class="contentDisp">
+          <b>{{alarms.alarmType}}</b> Detected in <b>{{alarms.compName}}</b>
+        </ion-card-title>
+
+      <!--  <ion-card-content>
+<span class="subtitle">
+                Please TURN OFF to cut the supply temporarily
+              </span>
+          <div>
+            <!--<button ion-button color="light" [disabled]="disabled" (click)="disabled=true" padding>TURN OFF</button>-->
+
+       <!--   <button ion-button color="light" [disabled]="disabled" (click)="turnOff(token, alarms.compID)" padding>TURN OFF</button>
+          </div>
+        </ion-card-content> -->
+
+      </ion-card>
+
+    </ion-col>
+
+    <!--To turn off the valve using the toggle button-->
+
+    <!--<ion-row>-->
+    <!--<ion-col *ngIf="activeAlarm.length > 0; else noAlarmsTemplate">-->
+
+    <!--<ion-card *ngFor="let alarms of activeAlarm ">-->
+
+    <!--<ion-card-content>-->
+
+    <!--<ion-row>-->
+    <!--<ion-col>-->
+    <!--Open Tap found in {{alarms.compName}}-->
+    <!--</ion-col>-->
+    <!--</ion-row>-->
+
+    <!--<ion-row>-->
+    <!--<ion-col col-4>-->
+    <!--</ion-col>-->
+    <!--<ion-col col-4>-->
+    <!--<ion-toggle [checked]="alarms.currState"-->
+    <!--(ionChange)="toggleClicked(alarms.compID,alarms.currState,alarms.sqlID)"></ion-toggle>-->
+    <!--</ion-col>-->
+    <!--</ion-row>-->
+
+    <!--<ion-row>-->
+    <!--<ion-col *ngIf="alarms.currState == 1; else elseBlock">-->
+    <!--On-->
+    <!--</ion-col>-->
+    <!--<ng-template #elseBlock>-->
+    <!--<ion-col>-->
+    <!--Off-->
+    <!--</ion-col>-->
+    <!--</ng-template>-->
+    <!--</ion-row>-->
+    <!--<ion-row>-->
+    <!--<ion-col>-->
+
+    <!--</ion-col>-->
+    <!--</ion-row>-->
+
+
+    <!--</ion-card-content>-->
+    <!--</ion-card>-->
+    <!--</ion-col>-->
+
+    <ng-template #noAlarmsTemplate>
+      <ion-card color="venAqua">
+
+        <ion-card-content text-center>
+          <span class="contentDisp">
+          No Active Alarms. All good here!! :)
+          </span>
+        </ion-card-content>
+
+      </ion-card>
+    </ng-template>
+
+
+  </ion-row>
+
+</ion-grid>

@@ -1,0 +1,62 @@
+<ion-header>
+  <ion-navbar color="venAqua">
+    <ion-title class="headingDisp"><b>About</b></ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col text-center>
+        <img src="assets/wegot.png" class="logo" padding/>
+        <span class="subtitle">Version: 0.0.1</span>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+<ion-list>
+  <ion-row>
+    <ion-col>
+      <button ion-item>
+      <span class="headingDisp">Official Website</span>
+      </button>
+    </ion-col>
+  </ion-row>
+
+  <ion-row>
+    <ion-col>
+      <button ion-item>
+        <span class="headingDisp">Our Products</span>
+      </button>
+    </ion-col>
+  </ion-row>
+</ion-list>
+
+  <ion-card>
+
+    <ion-row>
+      <ion-col>
+        <ion-item no-lines>
+          <span class="headingDisp">Connect with us</span>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+
+  <ion-row>
+    <ion-col text-center>
+
+      <a (click)="goToFb()">
+    <ion-icon class="icon" ios="logo-facebook" md="logo-facebook"></ion-icon>
+      </a>
+
+      <a (click)="goToTwitter()">
+    <ion-icon class="icon1" ios="logo-twitter" md="logo-twitter"></ion-icon>
+        </a>
+
+    </ion-col>
+  </ion-row>
+
+  </ion-card>
+
+</ion-content>

@@ -1,0 +1,63 @@
+<ion-content padding class=".bgdivCenter">
+
+  <ion-row justify-content-start text-center>
+    <ion-col><span class="headingDisp">New user Registration</span></ion-col>
+  </ion-row>
+
+  <ion-list>
+
+    <ion-row>
+      <ion-col center text-center>
+        <button ion-button large color="secondary" outline (click)="scanqr()">ScanQRCode</button>
+        <p center text-center (click)="login()">OR</p>
+      </ion-col>
+    </ion-row>
+
+    <ion-item>
+      <ion-label floating>Apartment Id</ion-label>
+      <ion-input [(ngModel)]="user.apartId" type="text"></ion-input>
+    </ion-item>
+
+    <!--<ion-item>-->
+    <!--<ion-label floating>Name</ion-label>-->
+    <!--<ion-input [(ngModel)]="name" type="text"></ion-input>-->
+    <!--</ion-item>-->
+
+    <ion-item>
+      <ion-label floating>Name</ion-label>
+      <ion-input [(ngModel)]="user.name" type="text"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Mobile number</ion-label>
+      <ion-input [(ngModel)]="user.email" type="number"></ion-input>
+    </ion-item>
+
+    <!--<ion-item>-->
+    <!--<ion-label floating>Create MPIN</ion-label>-->
+    <!--<ion-input [(ngModel)]="user.password" type="password"></ion-input>-->
+    <!--</ion-item>-->
+
+  </ion-list>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col center text-center>
+        <button ion-button block color="secondary"
+                (click)="sendOtp(user)" >Next</button>
+        <p (click)="emailsignup()"
+           class="subtitle">OR use Email-id instead?</p>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-list>
+    <ion-row>
+      <ion-col center text-center>
+        <p (click)="login()"
+           class="subtitle">Already a member? Login</p>
+      </ion-col>
+    </ion-row>
+  </ion-list>
+
+</ion-content>

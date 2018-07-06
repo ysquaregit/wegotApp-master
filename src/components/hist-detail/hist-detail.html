@@ -1,0 +1,27 @@
+<ion-grid class='bgdivCenter' text-center>
+  <ion-row>
+    <ion-col>
+      <span class="headingDisp">Detail Chart</span>
+    </ion-col>
+
+    <ion-col>
+      <div class="chart">
+        <canvas baseChart width="400" height="auto"
+                [datasets]="detailData"
+                [labels]="detailLabel"
+                [options]="detailChartOptions"
+                [colors]="detailColors"
+                [legend]="detailLegends"
+                [chartType]="detailChartType"></canvas>
+      </div>
+
+    </ion-col>
+  </ion-row>
+
+
+</ion-grid>
+
+
+
+
+

@@ -1,0 +1,55 @@
+<div text-center>
+  <span class="usageLitres">Bathroom 1 </span>
+</div>
+
+<div text-center>
+<a class="subtitle">Inlet name</a>
+</div>
+
+<div text-center>
+  <span class="usageLitres">3 PM </span>
+</div>
+
+<div text-center>
+<a class="subtitle">Hour</a>
+</div>
+
+<div class="chart">
+
+  <canvas baseChart height="50" width="100%"
+          [colors]="barChartColors"
+          [datasets]="barChartData"
+          [labels]="barChartLabels"
+          [options]="barChartOptions"
+          [legend]="barChartLegend"
+          [chartType]="barChartType"
+          (chartHover)="chartHovered($event)"
+          (chartClick)="chartClicked($event)"></canvas>
+
+</div>
+
+<ion-card>
+  <ion-card-header>
+    Total Usage
+  </ion-card-header>
+
+  <ion-card-content>
+    <span class="usageLitres">60</span>
+    <a class="subtitle">
+    Litres used
+  </a>
+  </ion-card-content>
+</ion-card>
+
+<ion-card>
+  <ion-card-header>
+    Maximum Usage
+  </ion-card-header>
+
+  <ion-card-content>
+    <span class="usageLitres">3:35 pm</span>
+    <div class="subtitle">
+      10 Litres used
+    </div>
+  </ion-card-content>
+</ion-card>

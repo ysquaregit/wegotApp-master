@@ -1,0 +1,40 @@
+page-bill-pay {
+
+  .bgdivCenter{
+    //background: black;
+    background: white;
+    //ion-scroll { white-space: nowrap; }
+  }
+
+  .progress-wrapper {
+    position: relative;
+    margin: 20px auto;
+    font-size: 30px;
+    text-align: center;
+  }
+
+  .current {
+    position: absolute;
+    //color: #bbb;
+    color: #424242;
+    font-weight: 100;
+    line-height: 1;
+  }
+
+  .headingDisp {
+    display: block;
+    font-family: 'Lato', sans-serif;
+    font-size: 18px;
+    //color: white;
+    color: #424242;
+  }
+
+  .contentDisp {
+    display: block;
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+    //color: white;
+    color: #424242;
+  }
+
+}

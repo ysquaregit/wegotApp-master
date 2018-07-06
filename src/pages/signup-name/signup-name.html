@@ -1,0 +1,27 @@
+
+<ion-content padding class="homePage">
+  <ion-row >
+    <ion-col>
+      <h2>What should we call you?</h2>
+      <ion-item>
+        <ion-label floating class="centerDisp">First Name</ion-label>
+        <ion-input [(ngModel)]="profile.firstName" type="text"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating class="centerDisp">Last Name</ion-label>
+        <ion-input [(ngModel)]="profile.lastName" type="text"></ion-input>
+      </ion-item>
+    </ion-col>
+  </ion-row>
+
+</ion-content>
+<ion-footer>
+  <ion-row>
+    <ion-col no-padding>
+      <button no-margin ion-button full large color="primary" (click)="moveNext()">Next</button>
+    </ion-col>
+
+
+  </ion-row>
+</ion-footer>

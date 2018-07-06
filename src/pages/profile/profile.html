@@ -1,0 +1,73 @@
+<ion-header>
+  <ion-navbar color="venAqua">
+    <ion-title class="headingDisp"><b>Profile</b></ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding-top class="homePage">
+
+  <ion-row>
+    <ion-col text-center>
+      <img class="image" src="assets/dp.jpg"/>
+    </ion-col>
+  </ion-row>
+  <ion-item>
+    <ion-icon class="image1" ios="ios-person" md="md-person"></ion-icon>
+    <span class="headingDisp"><b>Name :</b> {{ (profileData | async)?.firstName }} {{ (profileData | async)?.lastName }}</span>
+  </ion-item>
+
+  <ion-item>
+    <ion-icon class="image1" ios="ios-home" md="md-home"></ion-icon>
+    <span class="headingDisp"><b>Apartment Name: </b></span>
+    <span class="headingDisp">{{ (profileData | async)?.apartName }}</span>
+  </ion-item>
+
+  <ion-item>
+    <ion-icon class="image1" ios="ios-grid" md="md-grid"></ion-icon>
+    <span class="headingDisp"><b>Block Name: </b></span>
+    <span class="headingDisp">{{ (profileData | async)?.blockName }}</span>
+  </ion-item>
+
+  <ion-item>
+    <ion-icon class="image1" ios="ios-pin" md="md-pin"></ion-icon>
+    <span class="headingDisp"><b>Site Name: </b></span>
+    <span class="headingDisp">{{ (profileData | async)?.siteName }}</span>
+  </ion-item>
+
+  <!--<ion-item>-->
+    <!--<ion-icon class="image1" ios="ios-pin" md="md-pin"></ion-icon>-->
+    <!--<span class="headingDisp"><b>Site Address: </b></span>-->
+    <!--<span class="headingDisp">{{ (profileData | async)?.siteAdress }}</span>-->
+  <!--</ion-item>-->
+
+  <ion-item>
+    <ion-icon class="image1" ios="ios-mail" md="md-mail"></ion-icon>
+    <span class="headingDisp" padding-bottom><b>Email: </b></span>
+    <a (click)="toVerifyEmail()">
+      <ion-badge color={{b}}>{{ a }}</ion-badge>
+    </a>
+    <div>
+      <span class="headingDisp1">{{email}}</span>
+      <!--<a (click)="toAlterEmail()"><span class="contentDisp1"> Edit</span></a>-->
+    </div>
+  </ion-item>
+
+  <!--<ion-item>-->
+  <!--<ion-icon class="image1" ios="ios-call" md="md-call"></ion-icon>-->
+  <!--<span class="headingDisp"><b>Phone Number: </b></span>-->
+  <!--<div>-->
+  <!--<span class="contentDisp2">Edit</span>-->
+  <!--</div>-->
+  <!--</ion-item>-->
+
+  <button ion-item (click)="toAlterPassword()">
+    <ion-icon class="image1" ios="ios-key" md="md-key"></ion-icon>
+    <span class="headingDisp"><b>Change Password</b></span>
+  </button>
+
+  <!--<button ion-item (click)="toDeleteAccount()">-->
+    <!--<ion-icon class="image1" ios="ios-trash" md="md-trash"></ion-icon>-->
+    <!--<span class="headingDisp"><b>Delete Account</b></span>-->
+  <!--</button>-->
+
+</ion-content>

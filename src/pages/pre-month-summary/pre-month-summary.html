@@ -1,0 +1,56 @@
+<!--Real data-->
+
+<ion-header>
+  <ion-navbar color="venAqua">
+    <ion-title class="headingDisp"><b>Last Month Summary</b></ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="homePage">
+
+  <div text-center>
+    <span class="usageLitres"><b>{{prev_monthTotal}} </b><span class="subtitle"><b>Litres</b></span></span>
+  </div>
+
+  <div text-center padding-bottom>
+    <span class="subtitle"><b>water used Last Month</b></span>
+  </div>
+
+  <ion-card *ngFor="let points of monthCompSumData" color="venAqua">
+
+    <ion-card-header>
+      <span class="cardHeading">
+      {{ points.compName }}
+        </span>
+    </ion-card-header>
+
+    <ion-card-content>
+      <span class="centerDisp">
+        {{ points.compValue }}
+      </span>Litres
+    </ion-card-content>
+
+  </ion-card>
+
+
+</ion-content>
+
+<!--Dummy data
+
+<ion-grid>
+
+<ion-row justify-content-start ><ion-col><span class="headingDisp1" >Last Month Summary</span></ion-col></ion-row>
+
+<ion-card *ngFor="let point of customerPreMonthValue" color="venAqua" (click)="presentPopover($event)">
+
+<ion-card-header class="headingDisp">
+{{ point.sensorname }}
+</ion-card-header>
+
+<ion-card-content class="contentDisp">
+{{ point.sensorvalue }} Litres
+</ion-card-content>
+
+</ion-card>
+
+</ion-grid>-->

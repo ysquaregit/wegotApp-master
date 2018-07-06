@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-navbar color="venAqua">
+    <ion-title class="headingDisp"><b>Profile</b></ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="homePage">
+
+  <ion-grid>
+    <ion-row>
+      <ion-col text-center>
+        <span class="headingDisp">Delete the Account</span>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <!--<ion-row>-->
+    <!--<ion-col padding-top>-->
+      <!--<ion-item>-->
+        <!--<ion-label floating class="centerDisp">Email</ion-label>-->
+        <!--<ion-input [(ngModel)]="user.email" type="email"></ion-input>-->
+      <!--</ion-item>-->
+    <!--</ion-col>-->
+  <!--</ion-row>-->
+
+  <ion-row>
+    <ion-col padding-top>
+      <ion-item>
+        <ion-label floating class="centerDisp">Password</ion-label>
+        <ion-input [(ngModel)]="user.password" type="password"></ion-input>
+      </ion-item>
+    </ion-col>
+  </ion-row>
+
+  <ion-grid>
+    <ion-row padding-top>
+      <ion-col>
+        <button ion-button color="light" block><a (click)="showConfirm(token, user)">
+          <span class="headingDisp">Submit</span></a></button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>

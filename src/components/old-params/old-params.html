@@ -1,0 +1,39 @@
+<ion-grid>
+
+  <!--<ion-row>-->
+    <!--<ion-col text-center>-->
+      <!--<span class="headingDisp">Last Month Usage</span>-->
+    <!--</ion-col>-->
+  <!--</ion-row>-->
+
+  <ion-row>
+    <ion-col col-12 text-center>
+      <span class="indvParamDisp"> {{ prev_month_total }} </span>
+      <span class="subtitle">Litres Used</span>
+    </ion-col>
+  </ion-row>
+
+
+  <ion-row>
+    <ion-col col-12 text-center>
+      <!--<a (click)="billsPage()">-->
+        <!--<span class="centerDisp">₹{{ prev_month_cost | number : '1.1-1'}}-->
+        <span class="centerDisp">₹{{ prev_month_cost | number}}
+        <span class="subtitle">Bill Amount</span>
+        </span>
+
+        <!--<span class="dtDisp">-->
+        <!--<button ion-button color="secondary" outline>My Bills</button>-->
+      <!--</span>-->
+      <!--</a>-->
+    </ion-col>
+  </ion-row>
+
+  <ion-row>
+    <ion-col>
+      <!--<pre-month-chart></pre-month-chart>-->
+      <page-pre-month-summary></page-pre-month-summary>
+    </ion-col>
+  </ion-row>
+
+</ion-grid>

@@ -1,0 +1,12 @@
+<span class="headingDisp">Historical</span>
+
+<div class="chart">
+<canvas baseChart width="100" height="80"
+        [datasets]="horiChartData"
+        [colors]="horiChartColors"
+        [options]="horiChartOptions"
+        [labels]="horiChartLabels"
+        [chartType]="horiChartType"
+        (chartHover)="chartHovered($event)"
+        ></canvas>
+</div>

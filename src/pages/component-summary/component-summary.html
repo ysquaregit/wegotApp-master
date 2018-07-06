@@ -1,0 +1,74 @@
+<!--Live data-->
+
+<ion-header>
+  <ion-navbar color="venAqua">
+    <ion-title class="headingDisp"><b>Month Summary</b></ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="homePage">
+
+  <!--<ion-refresher (ionRefresh)="doRefresh($event)">-->
+    <!--<ion-refresher-content></ion-refresher-content>-->
+  <!--</ion-refresher>-->
+
+  <div text-center>
+    <span class="usageLitres"><b>{{monthTotal}} </b><span class="subtitle"><b>Litres</b></span></span>
+  </div>
+
+  <div text-center padding-bottom>
+    <span class="subtitle"><b>water used this Month</b></span>
+  </div>
+
+  <!--<div>-->
+    <!--<month-chart></month-chart>-->
+  <!--</div>-->
+
+  <!--<ion-card *ngFor="let points of monthCompSumData" color="venAqua" (click)="presentPopover($event)">-->
+  <ion-card *ngFor="let points of monthCompSumData" color="venAqua" padding-left padding-right>
+
+    <ion-card-header class="cardHeading" >
+      {{ points.compName }}
+    </ion-card-header>
+
+    <ion-card-content>
+      <span class="centerDisp">
+        {{ points.compValue }}
+      </span>Litres
+    </ion-card-content>
+
+  </ion-card>
+
+
+</ion-content>
+
+<!--Dummy Data-->
+
+<!--<ion-header>
+<ion-navbar color="venAqua">
+<ion-title class="headingDisp" text-center>Month Summary</ion-title>
+</ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+<ion-refresher (ionRefresh)="doRefresh($event)">
+<ion-refresher-content></ion-refresher-content>
+</ion-refresher>
+
+<ion-card *ngFor="let point of customerMonthValue" color="venAqua" (click)="presentPopover($event)">
+
+<ion-card-header class="cardHeading">
+{{ point.sensorname }}
+</ion-card-header>
+
+<ion-card-content>
+<span class="centerDisp">
+{{ point.sensorvalue }}
+</span>
+<a class="subtitle">Litres</a>
+</ion-card-content>
+
+</ion-card>
+
+</ion-content>-->

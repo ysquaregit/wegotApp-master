@@ -1,0 +1,41 @@
+<!-- Generated template for the MonthChartComponent component -->
+<!--<div>-->
+  <!--{{text}}-->
+<!--</div>-->
+
+<!--<ion-content style="width: 100%;height: 100%" >-->
+
+  <!--<div  class="chart">-->
+
+    <!--<canvas baseChart width="300" height="300"-->
+            <!--[colors]="lineChartColors"-->
+            <!--[datasets]="barChartData"-->
+            <!--[labels]="barChartLabels"-->
+            <!--[options]="barChartOptions"-->
+            <!--[legend]="barChartLegend"-->
+            <!--[chartType]="barChartType"-->
+            <!--(chartHover)="chartHovered($event)"-->
+            <!--(chartClick)="chartClicked($event)"></canvas>-->
+
+  <!--</div>-->
+
+<!--</ion-content>-->
+
+<ion-grid fixed style="height: auto; width: auto">
+  <!--<span class="headingDisp" text-center>Day Usage</span>-->
+
+  <div class="chart">
+
+    <canvas baseChart width="400" height="300"
+      [colors]="lineChartColors"
+      [datasets]="barChartData"
+      [labels]="barChartLabels"
+      [options]="barChartOptions"
+      [legend]="barChartLegend"
+      [chartType]="barChartType"
+      (chartHover)="chartHovered($event)"
+      (chartClick)="chartClicked($event)"></canvas>
+
+  </div>
+
+</ion-grid>

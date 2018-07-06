@@ -1,0 +1,79 @@
+<ion-header>
+  <ion-navbar color="venAqua">
+    <ion-title class="headingDisp"><b>Water Budget</b></ion-title>
+  </ion-navbar>
+</ion-header>
+
+<!--<ion-content padding class='bgdivCenter'>-->
+<ion-content padding class='homePage'>
+
+  <ion-row>
+
+    <ion-col col-2></ion-col>
+
+    <ion-col col-8>
+
+      <div class="progress-wrapper">
+        <div class="current" [ngStyle]="getOverlayStyle()">{{ precentValDeci}}<span class="contentDisp">% used</span>
+        </div>
+
+        <round-progress
+          [current]="current"
+          [max]="max"
+          [color]="'#40ACE2'"
+          [background]="'#565757'"
+          [radius]="100"
+          [stroke]="20"
+          [semicircle]="false"
+          [rounded]="true"
+          [clockwise]="true"
+          [responsive]="true"
+          [duration]="800"
+          [animation]="'easeInOutQuart'"
+          [animationDelay]="0"
+        ></round-progress>
+      </div>
+
+    </ion-col>
+    <ion-col col-2></ion-col>
+
+  </ion-row>
+
+  <ion-row>
+    <ion-col col-6 text-center>
+      <span class="subheadingDisp">{{max}} L</span>
+      <span class="contentDisp">Budget</span>
+    </ion-col>
+
+    <ion-col col-6 text-center>
+      <span class="subheadingDisp">{{current}} L</span>
+      <span class="contentDisp">Used</span>
+    </ion-col>
+  </ion-row>
+
+  <hr>
+
+  <ion-row text-center>
+    <ion-col>
+      <span class="headingDisp">Set Budget</span>
+    </ion-col>
+  </ion-row>
+
+  <ion-row>
+    <ion-col>
+      <ion-item no-lines>
+        <ion-range min="1000" max="50000" [(ngModel)]="max" color="venAqua">
+          <ion-label range-left color="venAqua">1000</ion-label>
+          <ion-label range-right color="venAqua">50000</ion-label>
+        </ion-range>
+      </ion-item>
+    </ion-col>
+  </ion-row>
+
+  <ion-row>
+    <ion-col text-center>
+      <button ion-button color="secondary" (click)="setBudget()">Set Budget</button>
+    </ion-col>
+  </ion-row>
+
+</ion-content>

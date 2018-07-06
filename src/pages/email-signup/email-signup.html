@@ -1,0 +1,117 @@
+<ion-content  class="homePage">
+  <!-- Real floating action button, fixed. It will not scroll with the content -->
+ <!-- <ion-fab bottom right>
+    <button ion-fab  (click)="next()"><ion-icon name="md-arrow-round-forward"></ion-icon></button>
+  </ion-fab>-->
+
+
+<ion-slides  (ionSlideDidChange)="swiping()">
+
+  <ion-slide  >
+    <h1 >Hi!</h1>
+    <p>Welcome to Wegot</p><p>Enter the UID</p>
+    <ion-item padding-top>
+      <ion-label floating class="centerDisp">UID</ion-label>
+      <ion-input [(ngModel)]="profile.uniqueId" type="password"></ion-input>
+    </ion-item>
+    <ion-item>
+
+      <ion-label floating class="centerDisp">Re-enter UID</ion-label>
+          <ion-input [(ngModel)]="profile.uniqueId1" type="text"></ion-input>
+        </ion-item>
+
+
+
+
+
+  </ion-slide>
+
+  <ion-slide>
+    <ion-row align-items-end>
+      <ion-col>
+        <h2>What should we call you?</h2>
+        <ion-item>
+          <ion-label floating class="centerDisp">First Name</ion-label>
+          <ion-input [(ngModel)]="profile.firstName" type="text"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label floating class="centerDisp">Last Name</ion-label>
+          <ion-input [(ngModel)]="profile.lastName" type="text"></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+
+
+
+
+  </ion-slide>
+
+  <ion-slide>
+    <h2>About your place</h2>
+    <p>This information will help us server better</p>
+
+    <ion-item>
+      <ion-label stacked>House Size</ion-label>
+      <ion-select interface="popover" [(ngModel)]="profile.hsize">
+        <ion-option value="0">select</ion-option>
+        <ion-option value="1">1 BHK</ion-option>
+        <ion-option value="2">2 BHK</ion-option>
+        <ion-option value="3">3 BHK</ion-option>
+        <ion-option value="4">4 BHK</ion-option>
+        <ion-option value="5">5 BHK</ion-option>
+      </ion-select>
+    </ion-item>
+
+
+    <ion-item>
+      <ion-label floating class="centerDisp">No of People</ion-label>
+      <ion-input [(ngModel)]="profile.noofpeople" type="number"></ion-input>
+    </ion-item>
+
+  </ion-slide>
+
+  <ion-slide>
+    <h2>Email Address</h2>
+    <p>Provide an email address to signup with us</p>
+
+    <ion-item>
+      <ion-label floating class="centerDisp">Email</ion-label>
+      <ion-input [(ngModel)]="user.email" type="email"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating class="centerDisp">Password</ion-label>
+      <ion-input [(ngModel)]="user.password" type="password"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating class="centerDisp">Password</ion-label>
+      <ion-input [(ngModel)]="verfiy" type="password"></ion-input>
+    </ion-item>
+
+  </ion-slide>
+
+
+  <ion-slide>
+    <h2>Mobile Number</h2>
+    <p>Provide a mobile number for receving important alerts</p>
+
+    <ion-item>
+      <ion-label floating class="centerDisp">Mobile Number</ion-label>
+      <ion-input [(ngModel)]="profile.mobile" type="number"></ion-input>
+    </ion-item>
+
+
+    <ion-item>
+      <ion-label floating class="centerDisp">Re Enter Mobile Number</ion-label>
+      <ion-input [(ngModel)]="mobverify" type="number"></ion-input>
+    </ion-item>
+    <button ion-button block class="buttonDisp" color="primary" (click)="verifymob(user,profile)">Verify</button>
+
+  </ion-slide>
+
+
+
+</ion-slides>
+
+</ion-content>

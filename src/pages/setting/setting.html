@@ -1,0 +1,103 @@
+<ion-header>
+  <ion-navbar color="venAqua">
+    <ion-title class="headingDisp"><b>Settings</b></ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="homePage">
+
+  <!--<ion-grid>-->
+  <!--<span class="contentDisp1">Alarms</span>-->
+
+    <!--<ion-row>-->
+      <!--<ion-col>-->
+        <!--<ion-item>-->
+          <!--<ion-label><span class="headingDisp">Push Notifications</span></ion-label>-->
+          <!--<ion-toggle disabled="true" [(ngModel)]="pushNotification"></ion-toggle>-->
+        <!--</ion-item>-->
+      <!--</ion-col>-->
+    <!--</ion-row>-->
+  <!--</ion-grid>-->
+
+  <ion-grid>
+    <span class="contentDisp1">Help</span>
+
+    <ion-card (click)="email()">
+      <ion-card-header>
+        <span class="headingDisp">Email Support</span>
+      </ion-card-header>
+      <ion-card-content>
+        <span class="contentDisp1">support@wegot.in</span>
+      </ion-card-content>
+    </ion-card>
+
+    <!--<ion-row>-->
+      <!--<ion-col>-->
+        <!--<button ion-item (click)="email()">-->
+          <!--<span class="headingDisp">Email Support: </span>-->
+          <!--<span class="contentDisp1">support@wegot.in</span>-->
+        <!--</button>-->
+      <!--</ion-col>-->
+    <!--</ion-row>-->
+
+    <!--<ion-row>-->
+      <!--<ion-col>-->
+        <!--<button ion-item (click)="goToContactUs()">-->
+          <!--<span class="headingDisp">Contact Us</span>-->
+        <!--</button>-->
+      <!--</ion-col>-->
+    <!--</ion-row>-->
+  </ion-grid>
+
+  <ion-grid>
+    <span class="contentDisp1">Information</span>
+
+    <!--<ion-row>-->
+      <!--<ion-col>-->
+        <!--<button ion-item (click)="goToAbout()">-->
+        <!--<span class="headingDisp">About Wegot</span>-->
+        <!--</button>-->
+      <!--</ion-col>-->
+    <!--</ion-row>-->
+
+    <!--<ion-list>-->
+
+      <ion-row>
+        <ion-col>
+          <a href="http://www.wegot.in/">
+          <button ion-item>
+            <span class="headingDisp">Official Website</span>
+            <!--<span class="contentDisp1">www.wegot.in</span>-->
+          </button>
+          </a>
+        </ion-col>
+      </ion-row>
+
+    <ion-card>
+
+      <ion-row>
+        <ion-col>
+          <ion-item no-lines>
+            <span class="headingDisp">Connect with us</span>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col text-center padding-bottom>
+
+          <a href="https://www.facebook.com/WegotUtility/">
+            <ion-icon class="icon" ios="logo-facebook" md="logo-facebook"></ion-icon>
+          </a>
+
+          <a href="https://twitter.com/venaqua_in?ref_src=twsrc%5Etfw&ref_url=http:/dev3.venaqua.com/media.html">
+            <ion-icon class="icon1" ios="logo-twitter" md="logo-twitter"></ion-icon>
+          </a>
+
+        </ion-col>
+      </ion-row>
+
+    </ion-card>
+  </ion-grid>
+
+</ion-content>

@@ -1,0 +1,37 @@
+<ion-row text-center>
+  <ion-col>
+    <span class="headingDisp">History</span>
+  </ion-col>
+</ion-row>
+
+<ion-grid>
+  <ion-row>
+    <ion-col *ngIf="alarmHistory.length > 0; else noAlarmsTemplate">
+
+      <ion-card *ngFor="let alarms of alarmHistory" color="venAqua">
+
+        <ion-card-content text-center>
+
+          <span class="contentDisp">
+           <b>{{alarms.alarm_type}}</b> {{alarms.state}} in <b>{{ alarms.cust_name }}</b> on {{ alarms.dt | date: "dd-MM-yyyy hh:mm a"}}
+          </span>
+
+        </ion-card-content>
+
+      </ion-card>
+    </ion-col>
+
+    <ng-template #noAlarmsTemplate>
+      <ion-card color="venAqua">
+
+        <ion-card-content text-center>
+          <span class="contentDisp">
+          No Alarm history found
+          </span>
+        </ion-card-content>
+
+      </ion-card>
+    </ng-template>
+
+  </ion-row>
+</ion-grid>

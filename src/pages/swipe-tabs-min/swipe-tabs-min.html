@@ -1,0 +1,17 @@
+<ion-content style="background-color: black" >
+
+  <ion-slides #pageSlider
+              (ionSlideWillChange)="changeWillSlide($event)" [initialSlide]="1">
+    <ion-slide >
+      <page-left-panel-min></page-left-panel-min>
+
+    </ion-slide>
+    <ion-slide >
+      <page-home-min></page-home-min>
+    </ion-slide>
+    <ion-slide>
+      <page-right-panel-min></page-right-panel-min>
+    </ion-slide>
+  </ion-slides>
+
+</ion-content>

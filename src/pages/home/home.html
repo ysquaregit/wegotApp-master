@@ -1,0 +1,116 @@
+<ion-header>
+  <ion-toolbar color="venAqua">
+    <button ion-button menuToggle left>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title text-center>
+      <ion-title class="headingDisp"><b>VenAqua</b></ion-title>
+    </ion-title>
+    <ion-buttons end>
+      <button ion-button>
+        <ion-icon name="ios-water-outline"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding class="homePage">
+
+  <ion-menu side="left" [content]="mycontent" type="overlay">
+    <ion-content padding>
+      <ion-list>
+
+        <ion-grid>
+          <ion-row>
+            <ion-col>
+              <a (click)="toHome()">
+                <ion-icon class="image" ios="ios-home" md="md-home"></ion-icon>
+                <span class="headingDisp"> Home</span></a>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+
+        <ion-grid>
+          <ion-row>
+            <ion-col>
+              <a (click)="toAlarms()">
+                <ion-icon class="image" ios="ios-alert" md="md-alert"></ion-icon>
+                <span class="headingDisp">Alarms</span></a>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+
+        <!--<ion-grid>-->
+          <!--<ion-row>-->
+            <!--<ion-col>-->
+              <!--<a (click)="toBills()">-->
+                <!--<ion-icon class="image" ios="ios-card" md="md-card"></ion-icon>-->
+                <!--<span class="headingDisp">Bill Summary</span></a>-->
+            <!--</ion-col>-->
+          <!--</ion-row>-->
+        <!--</ion-grid>-->
+
+        <ion-grid>
+          <ion-row>
+            <ion-col padding-bottom>
+              <a (click)="toLastMonthSummary()">
+                <ion-icon class="image" ios="ios-calendar" md="md-calendar"></ion-icon>
+                <span class="headingDisp">Last Month Usage</span></a>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+
+          <hr>
+
+        <ion-grid>
+          <ion-row>
+            <ion-col padding-top>
+              <a (click)="toProfile()">
+                <ion-icon class="image1" ios="ios-contact" md="md-contact"></ion-icon>
+                <span class="headingDisp">Profile</span></a>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+
+        <ion-grid>
+          <ion-row>
+            <ion-col>
+              <a (click)="toSettings()">
+                <ion-icon class="image1" ios="md-help" md="md-help"></ion-icon>
+                <span class="headingDisp"> Help</span></a>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+
+        <ion-grid>
+          <ion-row>
+            <ion-col>
+              <a (click)="toLogout()">
+                <ion-icon class="image1" ios="ios-log-out" md="md-log-out"></ion-icon>
+                <span class="headingDisp">Logout</span></a>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-list>
+
+      <ion-footer no-border>
+        <ion-row>
+          <ion-col text-center padding>
+            <img src="assets/wegot.png" class="logo"/>
+            <span class="subtitle">Version: 2.0-a0.0.1</span>
+          </ion-col>
+        </ion-row>
+      </ion-footer>
+
+    </ion-content>
+  </ion-menu>
+
+  <ion-nav #mycontent [root]="rootPage"></ion-nav>
+
+  <ion-refresher (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+
+  <params></params>
+
+</ion-content>

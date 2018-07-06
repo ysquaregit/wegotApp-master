@@ -1,0 +1,97 @@
+<ion-grid style="height:260px;" align-items-stretch>
+
+  <ion-row justify-content-start>
+    <ion-col><span class="headingDisp">Electricity Usage</span></ion-col>
+  </ion-row>
+
+
+
+  <ion-row>
+    <ion-col col-12><span class="current0">This Month</span>
+    </ion-col>
+
+  </ion-row>
+
+
+
+  <ion-row>
+    <ion-col col-6 text-left><a (click)="alarmsPage()"><span class="indvParamDisp">0</span>
+      <span class="subtitle">Alarms</span></a>
+
+    </ion-col>
+
+    <ion-col col-6 text-right><a (click)="billsPage()"><span class="indvParamDisp">&#8377; {{ cur_cost }}</span>
+      <span class="subtitle">Est. Cost</span></a>
+    </ion-col>
+
+  </ion-row>
+
+
+  <ion-row>
+    <ion-col col-3></ion-col>
+
+    <ion-col col-6>
+
+      <a (click)="compSummary()">
+      <div class="progress-wrapper">
+        <div class="current" [ngStyle]="getOverlayStyle()">
+          {{ month_total }}</div>
+        <div class="current2" [ngStyle]="getOverlayStyle()"> Kw</div>
+
+        <round-progress
+          [current]="current"
+          [max]="max"
+          [color]="'rgba(233,109,87,1)'"
+          [background]="'#111111'"
+          [radius]="3"
+          [stroke]="0.5"
+          [semicircle]="false"
+          [rounded]="true"
+          [clockwise]="true"
+          [responsive]="true"
+          [duration]="800"
+          [animation]="'easeInOutQuart'"
+          [animationDelay]="0"
+        ></round-progress>
+      </div></a>
+    </ion-col>
+
+    <ion-col col-3></ion-col>
+  </ion-row>
+
+
+  <ion-row>
+    <ion-col col-6 text-left><a (click)="budgetPage()"><span class="indvParamDisp">{{cur_budget }}</span>
+      <span class="subtitle">Budget</span></a>
+    </ion-col>
+
+    <ion-col col-6 text-right><a href="#"><span class="indvParamDisp">{{ rp }}</span>
+      <span class="subtitle">Points</span></a></ion-col>
+
+  </ion-row>
+
+
+  <ion-row>
+    <ion-col>
+      <a (click)="dayCompSummary()"><span class="subtitleb">you have used {{ daytotal}} Kw today!</span></a>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
